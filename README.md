@@ -2,9 +2,6 @@
 
 A nostalgic iPod Classic interface for your Mac, integrated with Spotify. Relive the click wheel experience with your modern music library.
 
-![iPod Player Screenshot](https://raw.githubusercontent.com/tvillarete/ipod-classic-js/master/screenshot.png)
-*(Screenshot placeholder - this project is inspired by ipod-classic-js)*
-
 ## Features
 
 - **Iconic Design**: Faithful recreation of the iPod Classic interface, including the click wheel.
@@ -25,13 +22,13 @@ A nostalgic iPod Classic interface for your Mac, integrated with Spotify. Relive
 
 ## Work in Progress / Known Limitations
 
-- **Smart Playlists**: Currently only user-created and saved playlists are fetched. "Made For You" (Daily Mix, Discover Weekly) playlists must be manually "Liked" in Spotify to appear.
+- **Smart Playlists**: Currently only user-created and saved playlists are fetched. "Made For You" (Daily Mix, Discover Weekly) playlists are unavailable.
 - **Search**: Global search functionality is currently limited.
 - **Games**: Brick game is a placeholder.
 
 ## Installation
 
-1. **Download**: Get the latest `.dmg` from the [Releases](https://github.com/yourusername/ipod-player/releases) page.
+1. **Download**: Get the latest `.dmg` from the [Releases](https://github.com/aronnaxlin/ipod-spotify-player/releases) page.
 2. **Install**: Drag "iPod Player" to your Applications folder.
 3. **Launch**: Open the app and log in with your Spotify account.
 
