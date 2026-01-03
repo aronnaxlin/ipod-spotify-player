@@ -1,0 +1,1 @@
+export const LyricsSearchDialog = (props: any) => null;

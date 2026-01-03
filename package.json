@@ -1,0 +1,84 @@
+{
+  "name": "ipod-player",
+  "productName": "iPod Player",
+  "version": "1.0.0",
+  "description": "A nostalgic iPod Classic interface with Spotify integration",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && electron-builder",
+    "build:mac": "tsc && vite build && electron-builder --mac",
+    "preview": "vite preview",
+    "electron:dev": "concurrently -k \"cross-env BROWSER=none npm run dev\" \"wait-on tcp:5173 && cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .\""
+  },
+  "keywords": ["ipod", "spotify", "music", "electron", "nostalgic"],
+  "author": "Aronnax",
+  "license": "MIT",
+  "type": "commonjs",
+  "build": {
+    "appId": "com.aronnax.ipod-player",
+    "productName": "iPod Player",
+    "directories": {
+      "output": "release"
+    },
+    "protocols": [
+      {
+        "name": "iPod Player Protocol",
+        "schemes": [
+          "ipodplayer"
+        ]
+      }
+    ],
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.music",
+      "icon": "build/icon.icns",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["universal"]
+        }
+      ]
+    },
+    "dmg": {
+      "title": "iPod Player",
+      "icon": "build/icon.icns"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@types/spotify-web-api-js": "^0.0.27",
+    "@vitejs/plugin-react": "^5.1.2",
+    "autoprefixer": "^10.4.23",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.0",
+    "wait-on": "^9.0.3"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.26",
+    "i18next": "^25.7.3",
+    "lucide-react": "^0.562.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-i18next": "^16.5.1",
+    "react-player": "^3.4.0",
+    "sonner": "^2.0.7",
+    "spotify-web-api-js": "^1.5.2",
+    "tailwind-merge": "^3.4.0",
+    "zustand": "^5.0.9"
+  }
+}

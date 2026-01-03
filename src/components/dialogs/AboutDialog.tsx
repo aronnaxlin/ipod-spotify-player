@@ -1,0 +1,1 @@
+export const AboutDialog = (props: any) => null;

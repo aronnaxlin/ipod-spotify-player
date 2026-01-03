@@ -1,0 +1,1 @@
+export const ConfirmDialog = (props: any) => null;
